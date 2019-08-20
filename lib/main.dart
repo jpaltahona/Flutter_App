@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './description_place.dart';
+import './review_list.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,7 +18,13 @@ String descriptionDummy = '''simply dummy text of the printing and typesetting i
         appBar: AppBar(
           title: Text("App bar"),
         ),
-        body: new DescriptionPlace('Bahamas', 4, descriptionDummy)
+        body: Column(
+          children: <Widget>[
+            DescriptionPlace('Bahamas', 4, descriptionDummy),
+            ReviewList()
+          ],
+        )
+             
       )
       
     );

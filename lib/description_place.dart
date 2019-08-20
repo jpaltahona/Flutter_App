@@ -12,7 +12,7 @@ class DescriptionPlace extends StatelessWidget{
 
   final star = Container(
     margin: EdgeInsets.only(
-      top: 320.0,
+  //    top: 320.0,
       right: 3.0,
     ),
     child: Icon(
@@ -23,7 +23,7 @@ class DescriptionPlace extends StatelessWidget{
  
 final star_half = Container(
     margin: EdgeInsets.only(
-      top: 320.0,
+  //    top: 320.0,
       right: 3.0,
     ),
     child: Icon(
@@ -34,7 +34,7 @@ final star_half = Container(
 
 final star_border = Container(
     margin: EdgeInsets.only(
-      top: 320.0,
+  //    top: 320.0,
       right: 3.0,
     ),
     child: Icon(
@@ -46,7 +46,7 @@ final star_border = Container(
   final title_stars = Row(
     children: <Widget>[
       Container(
-        margin: EdgeInsets.only( top: 320.0, left: 20.0, right: 20.0 ),
+        margin: EdgeInsets.only( left: 20.0, right: 20.0 ),
         child: Text(
          namePlace,
           style: TextStyle( fontSize: 30.0, fontWeight: FontWeight.w900, fontFamily: "Lato" ),
@@ -73,7 +73,7 @@ final star_border = Container(
       )
     ,);
     
-    final Content_Description = Column(children: <Widget>[
+    final Content_Description = Column( children: <Widget>[
       title_stars,
       descriptionContent
     ],);
