@@ -73,10 +73,16 @@ final star_border = Container(
       )
     ,);
     
-    final Content_Description = Column( children: <Widget>[
-      title_stars,
-      descriptionContent
-    ],);
+    final Content_Description = Container(
+        margin: EdgeInsets.only(top: 350.0),
+        child: Column(
+            children: <Widget>[
+            title_stars,
+            descriptionContent
+          ],
+        )
+      );
+      
     return Content_Description;
   }
 }

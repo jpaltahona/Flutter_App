@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import './description_place.dart';
 import './review_list.dart';
+import './header_appbar.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-String descriptionDummy = '''simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.''';
+  String descriptionDummy = '''simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.''';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,21 +16,19 @@ String descriptionDummy = '''simply dummy text of the printing and typesetting i
         fontFamily: 'Lato'
       ),
       home:  Scaffold(
-        appBar: AppBar(
-          title: Text("App bar"),
-        ),
-        body: Column(
+        
+        body: Stack(
           children: <Widget>[
-            DescriptionPlace('Bahamas', 4, descriptionDummy),
-            ReviewList()
+            ListView(
+              children: <Widget>[
+                DescriptionPlace('Bahamas', 4, descriptionDummy),
+                ReviewList()
+              ],
+            ),
+           HeaderAppbar()
           ],
         )
-             
       )
-      
     );
   }
 }
-
-
-
